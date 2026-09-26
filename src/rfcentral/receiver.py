@@ -1,12 +1,16 @@
-from threading import Thread
-from serial import Serial  # type:ignore
 import struct
 import zlib
 from datetime import datetime
-from .displayer import ConsoleOutput
-from .common import GeneralUtil
-from .model import FrequencyPowerTime
+from threading import Thread
+
+from serial import Serial  # type:ignore
+
 from .broker import DataBroker
+from .common import GeneralUtil
+from .displayer import ConsoleOutput
+from .model import FrequencyPowerTime
+
+
 class Receiver(Thread):
     NEW_LINE =  b'\n'
 
@@ -48,7 +52,6 @@ class Receiver(Thread):
         return data
 
     def is_correct_checksum(self,checksum:int, data:bytes)->bool:
-        val:bool = False
         obtained_checksum:int = 0
         obtained_checksum = self.checksum_calculator(data)
         return checksum == obtained_checksum

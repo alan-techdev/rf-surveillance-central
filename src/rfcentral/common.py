@@ -1,4 +1,4 @@
-class GeneralUtil():
+class GeneralUtil:
 
     def __init__(self)->None:
         pass
@@ -11,5 +11,5 @@ class GeneralUtil():
         try:
             values:list[str] = data.split("|")
             return values
-        except IndexError as ex:
+        except IndexError:
             return None # FIXME needs to log

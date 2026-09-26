@@ -8,14 +8,14 @@ https://docs.python.org/3/library/sqlite3.html
 
 '''
 
-import sqlite3
 import os.path
+import sqlite3
 from pathlib import Path
 
 s = os.path.dirname(__file__)
 p = Path(s).parent.parent.parent.joinpath("database")
 
-class RowDataBaseManager():
+class RowDataBaseManager:
     db_raw_path = str(p) + os.path.sep + "raw.db" # raw database
 
     def __init__(self)->None:
@@ -38,7 +38,7 @@ class RowDataBaseManager():
         con.close() # not effecient
 
 
-class DetailDataBaseManager():
+class DetailDataBaseManager:
     db_detail_path = str(p) + os.path.sep + "detail.db" # detail database
 
     def __init__(self)->None:

@@ -11,18 +11,18 @@ import platform
 from argparse import ArgumentParser, Namespace
 
 from rfcentral import (
-    __author__,  # type:ignore
-    __description__,  # type:ignore
-    __license__,  # type:ignore
-    __title__,  # type:ignore
-    __url__,  # type:ignore
-    __version__,  # type:ignore
+   __author__,  # type:ignore
+   __description__,  # type:ignore
+   __license__,  # type:ignore
+   __title__,  # type:ignore
+   __url__,  # type:ignore
+   __version__,  # type:ignore
 )
 from rfcentral._help import bug_reporting
-
-from rfcentral.receiver import Receiver
-from rfcentral.displayer import ConsoleOutput
 from rfcentral.broker import DataBroker
+from rfcentral.displayer import ConsoleOutput
+from rfcentral.receiver import Receiver
+
 
 def get_cli_value()->tuple[float,float,str]:# type:ignore
    pass

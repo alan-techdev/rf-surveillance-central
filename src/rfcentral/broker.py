@@ -5,9 +5,7 @@ from .db.database import DetailDataBaseManager
 from .model import FrequencyPowerTime
 
 
-
-
-class DataBroker():
+class DataBroker:
     q: queue.Queue = queue.Queue()
 
     def __init__(self)->None:

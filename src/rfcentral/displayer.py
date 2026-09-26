@@ -1,10 +1,11 @@
 from datetime import datetime
 
-class ConsoleOutput():
+
+class ConsoleOutput:
 
     def __init__(self, power:float)->None:
         self.power = power
-        print(f'Frequency(Mhz)\t Power(dBm)\t time\t')
+        print('Frequency(Mhz)\t Power(dBm)\t time\t')
 
     def display(self, frequency:str, power:str, date_time:str)->None: # FIXME make it tabular later
         if float(power) >= self.power:

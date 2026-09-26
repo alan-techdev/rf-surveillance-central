@@ -1,4 +1,4 @@
-class FrequencyPowerTime():
+class FrequencyPowerTime:
 
     def __init__(self, frequency:float, power:float, date_time:str) -> None:
         self.frequency = frequency
@@ -9,7 +9,7 @@ class FrequencyPowerTime():
         return self.frequency, self.power, self.date_time
 
 
-class Search():
+class Search:
     def __init__(self,freq:tuple[float,float], power:tuple[float,float])->None:
         # doc later. max min
         self.freq = freq
