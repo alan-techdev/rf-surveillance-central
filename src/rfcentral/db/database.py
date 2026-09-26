@@ -79,7 +79,7 @@ class DetailDataBaseManager():
         return lst
 
     @classmethod
-    def insert_power_frequencies(cls, power: float, date_time:str, frequencies: list[float]):
+    def insert_power_frequencies(cls, power: float, date_time:str, frequencies: list[float])->None:
         con = sqlite3.Connection(cls.db_detail_path)
         cur = con.cursor()
         cur.execute("INSERT INTO Power VALUES(NULL,?,?)",(power,date_time))

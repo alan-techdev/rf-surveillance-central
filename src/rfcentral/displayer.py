@@ -2,11 +2,11 @@ from datetime import datetime
 
 class ConsoleOutput():
 
-    def __init__(self, power:float):
+    def __init__(self, power:float)->None:
         self.power = power
         print(f'Frequency(Mhz)\t Power(dBm)\t time\t')
 
-    def display(self, frequency:str, power:str, date_time:str): # FIXME make it tabular later
+    def display(self, frequency:str, power:str, date_time:str)->None: # FIXME make it tabular later
         if float(power) >= self.power:
             print('\a')
             print('\a')
@@ -22,4 +22,4 @@ class ConsoleOutput():
 
 if __name__ == "__main__":
     console = ConsoleOutput(60.00)
-    console.display('105.55',"69")
+    console.display('105.55',"69",str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))

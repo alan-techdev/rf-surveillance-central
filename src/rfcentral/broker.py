@@ -8,12 +8,12 @@ from .model import FrequencyPowerTime
 
 
 class DataBroker():
-    q = queue.Queue()
+    q: queue.Queue = queue.Queue()
 
-    def __init__(self):
+    def __init__(self)->None:
        pass
 
-    def worker(self):
+    def worker(self)->None:
         while True:
             obj = DataBroker.q.get() # blocks until an element found in queue
             # check for the element type
@@ -22,7 +22,7 @@ class DataBroker():
                DetailDataBaseManager.insert_frequency_power(frequency=data[0], power= data[1], date_time= data[2])
 
 
-    def start(self):
+    def start(self)->None:
         # Turn on the worker thread
         Thread(target=self.worker, daemon=True).start()
 

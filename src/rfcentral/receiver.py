@@ -1,5 +1,5 @@
 from threading import Thread
-from serial import Serial
+from serial import Serial  # type:ignore
 import struct
 import zlib
 from datetime import datetime
@@ -26,10 +26,10 @@ class Receiver(Thread):
         return len(packet) == 4
 
     def extract_length_checksum(self, packet:bytes)->int:
-        sum  = 0
+        sum:int  = 0
         if len(packet) == 4:
             values = struct.unpack("!I", packet)
-            sum:int = values[0]
+            sum = values[0]
         return sum
 
     def is_last_packet(self,packet:bytes)->bool:
@@ -53,7 +53,7 @@ class Receiver(Thread):
         obtained_checksum = self.checksum_calculator(data)
         return checksum == obtained_checksum
 
-    def ascending_sort(self,packet:bytes):
+    def ascending_sort(self,packet:bytes)->int:
         #if len(packet) != 0: Alan FIXME check for exception
         index:int = packet[0]
         return index

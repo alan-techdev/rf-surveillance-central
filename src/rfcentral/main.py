@@ -24,7 +24,7 @@ from rfcentral.receiver import Receiver
 from rfcentral.displayer import ConsoleOutput
 from rfcentral.broker import DataBroker
 
-def get_cli_value()->tuple[float,float,str]:
+def get_cli_value()->tuple[float,float,str]:# type:ignore
    pass
 
 def main()-> None:
