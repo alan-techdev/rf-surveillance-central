@@ -12,7 +12,7 @@ Development
 
 .. code-block:: shell
 
-    git clone git@github.com:alanmehio/rf-surveillance-central.git
+    git clone git@github.com:alan-techdev/rf-surveillance-central.git
     cd  rf-surveillance-central
 
 | Make the project in edit mode
