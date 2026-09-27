@@ -156,7 +156,9 @@ ignore = [
     "B008",  # do not perform function calls in argument defaults
     "W191",  # indentation contains tabs
     "B904",  # Allow raising exceptions without from e, for HTTPException
-]
+    "UP006", # Use tuple instead of t.Tuple from typing see https://peps.python.org/pep-0585/
+    "UP007", #  Use `X | Y` for type annotations
+]  
 
 
 [tool.ruff.lint.isort]

@@ -119,7 +119,7 @@ def generate_rst(dockerfile_path):
     return rst
 
 
-def parse_cli_args() -> t.Tuple[Path, t.Optional[str]]:
+def parse_cli_args() -> t.Tuple[Path, str | None]:
     parser = argparse.ArgumentParser(description="Process Dockerfile paths.")
 
     parser.add_argument(
